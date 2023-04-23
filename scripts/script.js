@@ -10,5 +10,14 @@ function add(...args) {
     return sum;
 };
 //subtract
+function subtract() {
+
+}
 //multiply
+function multiply() {
+
+}
 //divide
+function divide() {
+    
+}
