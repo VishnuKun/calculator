@@ -1,4 +1,7 @@
-//basic arithematic operation functions
+//variables for storing operator plus numbers
+let operator;
+let num1;
+let num2;
 
 //addition
 function add(...args) {
@@ -23,6 +26,6 @@ function divide() {
 }
 
 //takes operator plus two numbers
-function operator(oprtr, num1, num2) {
+function operate(operator, num1, num2) {
     //perform arithmetic operation as per operator
 }
