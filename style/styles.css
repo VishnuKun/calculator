@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    height: 40px;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+#footer {
+    background-color: gray;
+    height: 40px;
+    width: 100%;
+    margin-top: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
