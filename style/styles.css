@@ -20,6 +20,22 @@ body {
     border-bottom: 1px solid black;
 }
 
+#content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#box {
+    background-color: rgb(255, 255, 255);
+    height: 450px;
+    width: 260px;
+    border: 5px solid rgb(95, 82, 169);
+    border-radius: 19px;
+}
+
+
 #footer {
     background-color: gray;
     height: 40px;
