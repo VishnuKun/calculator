@@ -19,5 +19,10 @@ function multiply() {
 }
 //divide
 function divide() {
-    
+
+}
+
+//takes operator plus two numbers
+function operator(oprtr, num1, num2) {
+    //perform arithmetic operation as per operator
 }
