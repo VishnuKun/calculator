@@ -4,13 +4,8 @@ let num1;
 let num2;
 
 //addition
-function add(...args) {
-    let sum = 0;
-    for(let i = 0; i < args.length; i++) {
-        let item = args[i];
-        sum += item;
-    };
-    return sum;
+function add(num1, num2) {
+    return num1 + num2;
 };
 //subtract
 function subtract(num1, num2) {
