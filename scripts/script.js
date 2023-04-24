@@ -10,23 +10,10 @@ let displayValue = "";
 window.addEventListener("DOMContentLoaded", (e) => {
     let btn = document.addEventListener("click" , (e) => {
         //get the id of the event target
-        let target = e.target.id;
         //display stuff
-        if (target = "BUTTON") {
-            display(target);
-        };
         //clear everything on clicking AC
-        if ( target = "allClear") {
-            allClear();
-        };
         //clear one element at a time when backspace is clicked 
-        if (target = "clear") {
-
-        };
         //give the result plus stop further input adding to the display unless AC is clicked 
-        if (target = "equal") {
-
-        };
     });
 });
 
