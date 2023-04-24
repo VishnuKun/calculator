@@ -3,6 +3,11 @@ let operator;
 let num1;
 let num2;
 
+//calling functions after dom content is loaded only
+window.addEventListener("DOMContentLoaded", (e) => {
+
+});
+
 //addition
 function add(num1, num2) {
     return num1 + num2;
@@ -49,6 +54,9 @@ function addDecimal() {
 
 //display values plus solution at the display
 function display() {
+    //access the display element
+    let display = document.querySelector("#display");
+    //add the clicked buttons plus operators to the display
 };
 
 //return the solution
