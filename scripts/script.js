@@ -3,9 +3,31 @@ let operator;
 let num1;
 let num2;
 
+//storing everything that is currently on the display
+let displayValue = "";
+
 //calling functions after dom content is loaded only
 window.addEventListener("DOMContentLoaded", (e) => {
+    let btn = document.addEventListener("click" , (e) => {
+        //get the id of the event target
+        let target = e.target.id;
+        //display stuff
+        if (target = "BUTTON") {
+            display(target);
+        };
+        //clear everything on clicking AC
+        if ( target = "allClear") {
+            allClear();
+        };
+        //clear one element at a time when backspace is clicked 
+        if (target = "clear") {
 
+        };
+        //give the result plus stop further input adding to the display unless AC is clicked 
+        if (target = "equal") {
+
+        };
+    });
 });
 
 //addition
@@ -52,11 +74,14 @@ function backspace() {
 function addDecimal() {
 };
 
-//display values plus solution at the display
-function display() {
+//populate the display when any button is clicked
+function display(item) {
     //access the display element
     let display = document.querySelector("#display");
-    //add the clicked buttons plus operators to the display
+    //append the clicked item to the displayValue
+    displayValue += item;
+    //show displayValue on the display
+    display.append(displayValue);
 };
 
 //return the solution
