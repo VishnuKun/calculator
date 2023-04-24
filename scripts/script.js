@@ -37,6 +37,8 @@ function operate(operator, num1, num2) {
 
 //clear everything from the display and reset values 
 function allClear() {
+    let display = document.querySelector("#display");
+    display.innerHTML = "";
 };
 //backspace clear at one element at one time
 function backspace() {
