@@ -13,18 +13,17 @@ function add(...args) {
     return sum;
 };
 //subtract
-function subtract() {
-
+function subtract(num1, num2) {
+    return num1 - num2;
 }
 //multiply
-function multiply() {
-
+function multiply(num1, num2) {
+    return num1 * num2;
 }
 //divide
-function divide() {
-
+function divide(num1, num2) {
+    return num1 / num2;
 }
-
 //takes operator plus two numbers
 function operate(operator, num1, num2) {
     //perform arithmetic operation as per operator
