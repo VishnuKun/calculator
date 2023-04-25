@@ -64,69 +64,57 @@ body {
     background-color: #ffadad;
 }
 
-#clear {
-    background-color: #adb5bd;
-}
-
-#plus {
-    background-color: #adb5bd;
-}
-
+/* numbers */
 #one {
     background-color: #ced4da;
 }
-
 #two {
     background-color: #ced4da;
 }
-
 #three {
     background-color: #ced4da;
 }
-
-#minus {
-    background-color: #adb5bd;
-}
-
 #four {
     background-color: #ced4da;
 }
-
 #five {
     background-color: #ced4da;
 }
-
 #six {
     background-color: #ced4da;
 }
-
-#cross {
-    background-color: #adb5bd;
-}
-
 #seven {
     background-color: #ced4da;
 }
-
 #eight {
     background-color: #ced4da;
 }
-
 #nine {
     background-color: #ced4da;
-}
-
-#divide {
-    background-color: #adb5bd;
-}
-
-#decimal {
-    background-color: #adb5bd;
 }
 #zero {
     background-color: #ced4da;
 }
 
+/* operators */
+#clear {
+    background-color: #adb5bd;
+}
+#plus {
+    background-color: #adb5bd;
+}
+#minus {
+    background-color: #adb5bd;
+}
+#cross {
+    background-color: #adb5bd;
+}
+#divide {
+    background-color: #adb5bd;
+}
+#decimal {
+    background-color: #adb5bd;
+}
 #equal {
     grid-column: 3/5;
     background-color: aquamarine;
