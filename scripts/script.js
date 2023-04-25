@@ -1,20 +1,23 @@
 //variables for storing operator plus numbers
-let operator;
-let num1;
-let num2;
+let operator = "";
+let num1 = 0;
+let num2 = 0;
 
 //storing everything that is currently on the display
 let displayValue = "";
 
+console.log(displayValue)
+
 //calling functions after dom content is loaded only
 window.addEventListener("DOMContentLoaded", (e) => {
     let btn = document.addEventListener("click" , (e) => {
-        //get the id of the event target
-        //display stuff
-        //clear everything on clicking AC
-        //clear one element at a time when backspace is clicked 
-        //give the result plus stop further input adding to the display unless AC is clicked 
+    //get the id of the event target
+    //display stuff
+    //clear one element at a time when backspace is clicked 
+    //clear everything on clicking AC
+    //give the result plus stop further input adding to the display unless AC is clicked 
     });
+    console.log(btn);
 });
 
 //addition
