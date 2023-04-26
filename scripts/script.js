@@ -40,11 +40,11 @@ function divide(num1, num2) {
 function operate(operator, num1, num2) {
     //perform arithmetic operation as per operator
     //when operator is "+"
-    if (operator === "+") return add(num1,num2);
+    if (operator === '+') return add(num1,num2);
     //when operator is "-"
-    else if (operator === "-") return subtract(num1,num2);
+    else if (operator === '-') return subtract(num1,num2);
     //when operator is "x"
-    else if (operator === "x") return multiply(num1, num2);
+    else if (operator === 'x') return multiply(num1, num2);
     //when operator is "/"
     else if (operator === "/") return divide(num1, num2);
     else return null;
@@ -79,3 +79,4 @@ function equals() {
 };
 
 //check operator type
+console.log()
