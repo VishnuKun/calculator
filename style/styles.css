@@ -55,8 +55,13 @@ body {
     text-align: end;
     align-items: baseline;
     padding: 10px;
-    font-size: 2.3rem;
+    font-size: auto;
     font-family:  serif;
+    background-color: #ffffff;
+    word-wrap: break-word;
+    height: 130px;
+    width: auto;
+    overflow-y: auto;
 }
 
 #allClear {
@@ -166,4 +171,15 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.display::-webkit-scrollbar {
+    background-color: rgb(255, 255, 255);
+    width: 5px;
+    background-color: #a8a8a891;
+    border-radius: 5px;
+}
+.display::-webkit-scrollbar-thumb {
+    background-color: #7e7e7e;
+    border-radius: 5px;
 }

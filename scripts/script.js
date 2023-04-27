@@ -5,19 +5,18 @@ let num2 = 0;
 
 //storing everything that is currently on the display
 let displayValue = "";
-
-console.log(displayValue)
+//store solution
+let solution = null;
 
 //calling functions after dom content is loaded only
 window.addEventListener("DOMContentLoaded", (e) => {
     let btn = document.addEventListener("click" , (e) => {
-    //get the id of the event target
-    //display stuff
-    //clear one element at a time when backspace is clicked 
-    //clear everything on clicking AC
-    //give the result plus stop further input adding to the display unless AC is clicked 
+        //get the id of the event target
+        //display stuff
+        //clear one element at a time when backspace is clicked 
+        //clear everything on clicking AC
+        //give the result plus stop further input adding to the display unless AC is clicked 
     });
-    console.log(btn);
 });
 
 //addition
@@ -54,8 +53,15 @@ function operate(operator, num1, num2) {
 
 //clear everything from the display and reset values 
 function allClear() {
+    //access display box
     let display = document.querySelector(".display");
+    //changing 
     display.innerHTML = "";
+    //resetting variables
+    displayValue = "";
+    num1 = 0;
+    num2 = 0;
+    operator = "";
 };
 //backspace clear at one element at one time
 function backspace() {
@@ -72,10 +78,13 @@ function display(item) {
     displayValue += item;
     //show displayValue on the display
     display.append(displayValue);
+    //reset displayValue
+    displayValue = "";
 };
 
 //return the solution
 function equals() {
+    console.log("it's working");
 };
 
 //check operator type
