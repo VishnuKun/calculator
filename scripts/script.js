@@ -62,6 +62,7 @@ function allClear() {
     num1 = 0;
     num2 = 0;
     operator = "";
+    solution = null;
 };
 //backspace clear at one element at one time
 function backspace() {
