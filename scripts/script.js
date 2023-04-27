@@ -54,7 +54,7 @@ function operate(operator, num1, num2) {
 
 //clear everything from the display and reset values 
 function allClear() {
-    let display = document.querySelector("#display");
+    let display = document.querySelector(".display");
     display.innerHTML = "";
 };
 //backspace clear at one element at one time
@@ -67,7 +67,7 @@ function addDecimal() {
 //populate the display when any button is clicked
 function display(item) {
     //access the display element
-    let display = document.querySelector("#display");
+    let display = document.querySelector(".display");
     //append the clicked item to the displayValue
     displayValue += item;
     //show displayValue on the display
@@ -79,4 +79,3 @@ function equals() {
 };
 
 //check operator type
-console.log()
