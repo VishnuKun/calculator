@@ -2,11 +2,16 @@
 let operator = "";
 let num1 = 0;
 let num2 = 0;
-
+//access the display element
+let displayBox = document.querySelector(".display");
 //storing everything that is currently on the display
 let displayValue = "";
 //store solution
 let solution = null;
+//flags
+let equalFlag = false;
+let decimalFlag = true;
+let operatorFlag = true;
 
 //calling functions after dom content is loaded only
 window.addEventListener("DOMContentLoaded", (e) => {
@@ -53,10 +58,8 @@ function operate(operator, num1, num2) {
 
 //clear everything from the display and reset values 
 function allClear() {
-    //access display box
-    let display = document.querySelector(".display");
     //changing 
-    display.innerHTML = "";
+    displayBox.innerHTML = "";
     //resetting variables
     displayValue = "";
     num1 = 0;
@@ -65,29 +68,56 @@ function allClear() {
     solution = null;
 };
 //backspace clear at one element at one time
-function backspace() {
+function backSpace() {
+    //access the text in the display box
+    let elements = document.querySelector(".display");
+    //convert it into array
+    let elementsArray = elements.innerHTML.split('');
+    //remove the last element 
+    elementsArray.pop();
+    //re-split or join it back together
+    let processed = elementsArray.join('');
+    console.log(processed);
+    //reset the displaybox to empty
+    displayBox.innerHTML = "";
+    //insert new text content to the displayvalue
+    displayValue = processed;
+    //insert the new array into the displaybox
+    displayBox.append(displayValue);
+
 };
 //adds decimal
 function addDecimal() {
+    //access the right most element from the displayBox 
+    //remove it from the displayBox
+    //set displayBox = processedValue
 };
 
 //populate the display when any button is clicked
 function display(item) {
-    //access the display element
-    let display = document.querySelector(".display");
-    //append the clicked item to the displayValue
-    displayValue += item;
-    //show displayValue on the display
-    display.append(displayValue);
+    //when a number is clicked
+    if (item !== NaN) {
+        //change flags 
+        operatorFlag = true;
+        decimalFlag = true;
+        equalFlag = true;
+        //append the clicked item to the displayValue
+        displayValue += item;
+        //show displayValue on the display
+        displayBox.append(displayValue);
+    };
+    //when an arithmetic operator is clicked
+    
     //reset displayValue
     displayValue = "";
+    //access the text in the box
+    let content = document.querySelector(".display").innerHTML;
 };
 
 //return the solution
 function equals() {
-    let display = document.querySelector(".display");
     solution = operate(operator, num1, num2);
-    display.append(solution);
+    displayBox.append(solution);
 };
 
-//check operator type
+//testing
