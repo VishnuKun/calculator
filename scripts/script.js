@@ -85,7 +85,9 @@ function display(item) {
 
 //return the solution
 function equals() {
-    console.log("it's working");
+    let display = document.querySelector(".display");
+    solution = operate(operator, num1, num2);
+    display.append(solution);
 };
 
 //check operator type

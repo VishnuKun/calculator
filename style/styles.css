@@ -66,6 +66,7 @@ body {
 .display:empty:not(:focus):before {
     content: attr(data-text);
     color: #0000009c;
+    font-size: 40px;
 }
 
 #allClear {
