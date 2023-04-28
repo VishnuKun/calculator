@@ -77,12 +77,11 @@ function backSpace() {
     elementsArray.pop();
     //re-split or join it back together
     let processed = elementsArray.join('');
-    console.log(processed);
     //reset the displaybox to empty
     displayBox.innerHTML = "";
-    //insert new text content to the displayvalue
+    //insert processed content into displayValue
     displayValue = processed;
-    //insert the new array into the displaybox
+    //insert the new text content into the displaybox
     displayBox.append(displayValue);
 
 };
