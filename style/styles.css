@@ -55,13 +55,17 @@ body {
     text-align: end;
     align-items: baseline;
     padding: 10px;
-    font-size: auto;
+    font-size: 25px;
     font-family:  serif;
     background-color: #ffffff;
     word-wrap: break-word;
     height: 130px;
     width: auto;
     overflow-y: auto;
+}
+.display:empty:not(:focus):before {
+    content: attr(data-text);
+    color: #0000009c;
 }
 
 #allClear {
