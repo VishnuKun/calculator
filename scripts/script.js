@@ -13,6 +13,7 @@ let equalFlag = false;
 let decimalFlag = true;
 let operatorFlag = true;
 
+
 //calling functions after dom content is loaded only
 window.addEventListener("DOMContentLoaded", (e) => {
     let btn = document.addEventListener("click" , (e) => {
@@ -74,7 +75,7 @@ function backSpace() {
     //convert it into array
     let elementsArray = elements.innerHTML.split('');
     //remove the last element 
-    elementsArray.pop();
+    if (typeof parseFloat(elementsArray[elementsArray.length-1]) === 'number') elementsArray.pop();
     //re-split or join it back together
     let processed = elementsArray.join('');
     //reset the displaybox to empty
@@ -83,6 +84,10 @@ function backSpace() {
     displayValue = processed;
     //insert the new text content into the displaybox
     displayBox.append(displayValue);
+    //reset displayvalue
+    displayValue = "";
+    //change operator flags
+    operatorFlag = true;
 
 };
 //adds decimal
@@ -95,22 +100,36 @@ function addDecimal() {
 //populate the display when any button is clicked
 function display(item) {
     //when a number is clicked
-    if (item !== NaN) {
-        //change flags 
-        operatorFlag = true;
-        decimalFlag = true;
-        equalFlag = true;
+    if (typeof item === "number") {
         //append the clicked item to the displayValue
         displayValue += item;
         //show displayValue on the display
         displayBox.append(displayValue);
+        //change flags 
+        operatorFlag = true;
+        decimalFlag = true;
+        equalFlag = true;
     };
     //when an arithmetic operator is clicked
-    
+    if (typeof item === "string") {
+        //check operator if true or not
+        if (operatorFlag === true) {
+            console.log(operator);
+            //save operator
+            operator = item;
+            console.log(operator);
+            //append item to the displayValue
+            displayValue += item;
+            //show displayValue to on the displayBox
+            displayBox.append(displayValue);
+            //change flags 
+            operatorFlag = false;
+            decimalFlag = true;
+            equalFlag = true;
+        };
+    };
     //reset displayValue
     displayValue = "";
-    //access the text in the box
-    let content = document.querySelector(".display").innerHTML;
 };
 
 //return the solution
