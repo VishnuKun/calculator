@@ -55,7 +55,7 @@ body {
     text-align: end;
     align-items: baseline;
     padding: 10px;
-    font-size: 25px;
+    font-size: 35px;
     font-family:  serif;
     background-color: #ffffff;
     word-wrap: break-word;
@@ -108,22 +108,22 @@ body {
 
 /* operators */
 #clear {
-    background-color: #adb5bd;
+    background-color: #8d99ae;
 }
 #plus {
-    background-color: #adb5bd;
+    background-color: #8d99ae;
 }
 #minus {
-    background-color: #adb5bd;
+    background-color: #8d99ae;
 }
 #cross {
-    background-color: #adb5bd;
+    background-color: #8d99ae;
 }
 #divide {
-    background-color: #adb5bd;
+    background-color: #8d99ae;
 }
 #decimal {
-    background-color: #adb5bd;
+    background-color: #8d99ae;
 }
 #equal {
     grid-column: 3/5;

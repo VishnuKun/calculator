@@ -7,11 +7,12 @@ let displayBox = document.querySelector(".display");
 //storing everything that is currently on the display
 let displayValue = "";
 //store solution
-let solution = null;
+let solution;
 //flags
-let equalFlag = false;
-let decimalFlag = true;
-let operatorFlag = true;
+let equalFlag = false;      //for equal 
+let decimalFlag = true;     //for adding decimal
+let operatorFlag = true;    //for operators
+let numFlag = true;         //for numbers
 
 
 //calling functions after dom content is loaded only
@@ -67,6 +68,12 @@ function allClear() {
     num2 = 0;
     operator = "";
     solution = null;
+    //set all flags to default 
+    equalFlag = false;
+    decimalFlag = true;
+    operatorFlag = true;
+    numFlag = true;
+
 };
 //backspace clear at one element at one time
 function backSpace() {
@@ -92,36 +99,48 @@ function backSpace() {
 };
 //adds decimal
 function addDecimal() {
-    //access the right most element from the displayBox 
-    //remove it from the displayBox
-    //set displayBox = processedValue
+    //check if the flag is true or not
+    if (decimalFlag === true && numFlag === true) {
+        //add decimal to the box on click
+        displayValue = ".";
+        displayBox.append(displayValue);
+        //reset displayValue
+        displayValue = "";
+        //change flags
+        decimalFlag = false;
+        numFlag = false;
+    };
 };
 
 //populate the display when any button is clicked
 function display(item) {
-    //when a number is clicked
-    if (typeof item === "number") {
-        //append the clicked item to the displayValue
-        displayValue += item;
-        //show displayValue on the display
-        displayBox.append(displayValue);
-        //change flags 
-        operatorFlag = true;
-        decimalFlag = true;
-        equalFlag = true;
+    //check if numflag is true or not
+    if (numFlag === true) {
+        //when a number is clicked
+        if (typeof item === "number") {
+            //append the clicked item to the displayValue
+            displayValue += item;
+            //show displayValue on the display
+            displayBox.append(displayValue);
+            //change flags 
+            operatorFlag = true;
+            decimalFlag = true;
+            equalFlag = true;
+        };
     };
     //when an arithmetic operator is clicked
     if (typeof item === "string") {
         //check operator if true or not
         if (operatorFlag === true) {
-            console.log(operator);
+            //save number to num1
+            num1 = parseFloat(displayBox.innerHTML);
+            console.log(num1);
             //save operator
             operator = item;
-            console.log(operator);
             //append item to the displayValue
             displayValue += item;
             //show displayValue to on the displayBox
-            displayBox.append(displayValue);
+            displayBox.innerHTML = displayValue;
             //change flags 
             operatorFlag = false;
             decimalFlag = true;
@@ -134,8 +153,26 @@ function display(item) {
 
 //return the solution
 function equals() {
-    solution = operate(operator, num1, num2);
-    displayBox.append(solution);
+    //check if equal flag is true or not
+    if (equalFlag === true) {
+        //clear everything from the display
+        displayBox.innerHTML = "";
+        //perform operation
+        solution = operate(operator, num1, num2);
+        //add the value to displayvalue then to box
+        displayValue += solution;
+        displayBox.append(displayValue);
+        //change flags
+        decimalFlag = false;
+        operatorFlag = false;
+        equalFlag = false;
+        numFlag = false;
+        //reset variables
+        displayValue = "";
+        num1 = 0;
+        num2 = 0;
+        operator = true;
+    };
 };
 
 //testing
