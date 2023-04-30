@@ -145,6 +145,8 @@ function display(item) {
             operatorFlag = false;
             decimalFlag = true;
             equalFlag = true;
+            //reset displaybox
+            displayValue = "";
         };
     };
     //reset displayValue

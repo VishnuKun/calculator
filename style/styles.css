@@ -57,11 +57,10 @@ body {
     padding: 10px;
     font-size: 35px;
     font-family:  serif;
-    background-color: #ffffff;
     word-wrap: break-word;
-    height: 130px;
+    height: 110px;
     width: auto;
-    overflow-y: auto;
+    overflow-x: auto;
 }
 .display:empty:not(:focus):before {
     content: attr(data-text);
