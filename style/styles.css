@@ -74,56 +74,15 @@ body {
 }
 
 /* numbers */
-#one {
-    background-color: #ced4da;
-}
-#two {
-    background-color: #ced4da;
-}
-#three {
-    background-color: #ced4da;
-}
-#four {
-    background-color: #ced4da;
-}
-#five {
-    background-color: #ced4da;
-}
-#six {
-    background-color: #ced4da;
-}
-#seven {
-    background-color: #ced4da;
-}
-#eight {
-    background-color: #ced4da;
-}
-#nine {
-    background-color: #ced4da;
-}
-#zero {
+.operand {
     background-color: #ced4da;
 }
 
 /* operators */
-#clear {
+.operators {
     background-color: #8d99ae;
 }
-#plus {
-    background-color: #8d99ae;
-}
-#minus {
-    background-color: #8d99ae;
-}
-#cross {
-    background-color: #8d99ae;
-}
-#divide {
-    background-color: #8d99ae;
-}
-#decimal {
-    background-color: #8d99ae;
-}
+
 #equal {
     grid-column: 3/5;
     background-color: aquamarine;

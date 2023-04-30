@@ -16,31 +16,31 @@
             <div class="calculator">
                 <div class="display" data-text="0"></div>
                 <button id="allClear" onclick="allClear()">AC</button>
-                <button id="clear" onclick="backSpace()">
+                <button class="operators" id="clear" onclick="backSpace()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
                         <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
                       </svg>
                 </button>
-                <button id="plus" onclick="display('&#x2b;')">&#x2b;</button>
+                <button class="operators" id="plus" onclick="display('&#x2b;')">&#x2b;</button>
 
-                <button id="one" type="button" onclick="display(1)">1</button>
-                <button id="two" onclick="display(2)">2</button>
-                <button id="three" onclick="display(3)">3</button>
-                <button id="minus" onclick="display('&#x2212;')">&#x2212;</button>
+                <button class="operand" id="one" type="button" onclick="display(1)">1</button>
+                <button class="operand" id="two" onclick="display(2)">2</button>
+                <button class="operand" id="three" onclick="display(3)">3</button>
+                <button class="operators" id="minus" onclick="display('&#x2212;')">&#x2212;</button>
 
-                <button id="four" onclick="display(4)">4</button>
-                <button id="five" onclick="display(5)">5</button>
-                <button id="six" onclick="display(6)">6</button>
-                <button id="cross" onclick="display('&#xd7;')">&#xd7;</button>
+                <button class="operand" id="four" onclick="display(4)">4</button>
+                <button class="operand" id="five" onclick="display(5)">5</button>
+                <button class="operand" id="six" onclick="display(6)">6</button>
+                <button class="operators" id="cross" onclick="display('&#xd7;')">&#xd7;</button>
 
-                <button id="seven" onclick="display(7)">7</button>
-                <button id="eight" onclick="display(8)">8</button>
-                <button id="nine" onclick="display(9)">9</button>
-                <button id="divide" onclick="display('&#xf7;')">&#xf7;</button>
+                <button class="operand" id="seven" onclick="display(7)">7</button>
+                <button class="operand" id="eight" onclick="display(8)">8</button>
+                <button class="operand" id="nine" onclick="display(9)">9</button>
+                <button class="operators" id="divide" onclick="display('&#xf7;')">&#xf7;</button>
 
-                <button id="decimal" onclick="display('&#x2219;')">&#x2219;</button>
-                <button id="zero" onclick="display(0)">0</button>
-                <button id="equal" onclick="equals()">&#x3d;</button>
+                <button class="operators" id="decimal" onclick="display('&#x2219;')">&#x2219;</button>
+                <button class="operand" id="zero" onclick="display(0)">0</button>
+                <button class="operators" id="equal" onclick="equals()">&#x3d;</button>
             </div>
         </div>
         <div id="footer">About</div>
