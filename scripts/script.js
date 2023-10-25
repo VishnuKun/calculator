@@ -4,10 +4,10 @@ let num2 = "";
 let displayBox = document.querySelector(".display");
 let displayValue = "";
 let solution;
-let equalFlag = false;       
-let decimalFlag = true;     
-let operatorFlag = true;    
-let numFlag = true;         
+let equalFlag = false;
+let decimalFlag = true;
+let operatorFlag = true;
+let numFlag = true;
 
 //addition
 function add(num1, num2) {
